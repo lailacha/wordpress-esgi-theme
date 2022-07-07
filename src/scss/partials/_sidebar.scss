@@ -1,0 +1,27 @@
+.sidebar{
+    .recent-post
+    {
+        display: flex;
+
+
+        img{
+            width: 88px;
+            height: 88px;
+        }
+
+    }
+
+    .recents-post--text{
+        margin-left: rem(25);
+        a{
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 20px;
+        }
+
+        p{
+            color: #ADADAD;
+            font-size: 13px;
+        }
+    }
+}

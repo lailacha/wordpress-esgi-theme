@@ -1,0 +1,22 @@
+#site-footer {
+  font-family: $font1;
+  margin-top: rem(34);
+  padding: rem(66) 0;
+  text-align: center;
+  background-color: var(--main-color);
+  
+  h3{color: var(--light-text);}
+
+  svg path {
+    fill: var(--logo-footer-color);
+  }
+
+}
+
+
+.footer-contact {
+	align-items: flex-end !important;
+	display: flex;
+	flex-direction: column;
+
+}

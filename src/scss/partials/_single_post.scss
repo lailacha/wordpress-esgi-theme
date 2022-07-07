@@ -1,0 +1,27 @@
+.post {
+    a {
+        text-decoration: none;
+    }
+    .post-tag{
+        display: block;
+        padding: rem(7);
+        background-color: #F8F8F8;
+        width: unset;
+        margin-right: rem(10);
+        text-decoration: none;
+        color: var(--dark-grey);
+    }
+
+    .comments{
+        display: flex;
+        flex-direction: column;
+        background-color: #F9F9F9;
+        padding: rem(30);
+        margin-top: rem(50);
+
+        a {
+            color: var(--main-color);
+        
+        }
+    }
+}

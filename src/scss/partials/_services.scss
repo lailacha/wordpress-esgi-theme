@@ -1,0 +1,26 @@
+.services-page{
+  
+
+    img{
+      padding: 0;
+    }
+  .services__banner {
+    height: 480px;
+    img{
+      padding:0;
+      object-fit: cover;
+    }
+  
+    h3{
+      position: relative;
+    }
+    h3::after{
+      @include text_underline;
+    }
+  }
+
+
+  .content {
+    padding-left: rem(70);
+  }
+}
