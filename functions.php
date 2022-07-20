@@ -205,8 +205,36 @@ function cc_mime_types($mimes) {
 
 
 
+add_action( 'wp_ajax_load_posts', 'esgi_ajax_load_posts' );
+add_action( 'wp_ajax_nopriv_load_posts', 'esgi_ajax_load_posts' );
+
+
+function esgi_ajax_load_posts(){
+	$paged = $_POST['page'];
+	$args = [
+		'post_type' => 'post',
+		'posts_per_page' => get_option('posts_per_page'),
+		'post_status' => 'publish',
+		'paged' => $paged,
+	];
+	$the_query = new WP_Query($args);
+	// Mise en buffer
+	ob_start();
+	include('template-parts/post-list.php');
+	echo '<script>ajaxizePageLinks()</script>';
+	// Récupération du contenu du buffer
+	echo ob_get_clean();
+	wp_die();
+}
+
+
+// Override du filtre paginate_links_output utilisé par paginate_links
+add_filter( 'paginate_links_output', 'esgi_paginate_links' );
+
+function esgi_paginate_links($args) {
+	return $args;
+}
 
 
 
 
-?>

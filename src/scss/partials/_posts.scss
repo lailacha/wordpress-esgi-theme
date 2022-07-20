@@ -1,0 +1,107 @@
+#blog {
+
+  .blog-title {
+
+    font-family: $font1;
+    font-style: normal;
+    font-size: rem(48);
+    color: var(--main-color);
+    text-align: left;
+    margin-bottom: rem(50);
+  }
+
+
+  .posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .post-item {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      margin: 15px;
+
+      .post-item-image {
+        box-sizing: border-box;
+        margin-bottom: 25px;
+        width: 333px;
+        height: 222px;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        /* img {
+           width: 333px;
+           height: 222px;
+           object-fit: cover;
+           background-repeat: no-repeat;
+           position: relative;
+         }*/
+      }
+
+      .post-item-category {
+        color: white;
+        font-weight: 800;
+        line-height: 25px;
+        letter-spacing: 1px;
+        position: absolute;
+        height: 25px;
+        width: 100%;
+        left: 2%;
+        top: 2%;
+      }
+
+      .post-item-title {
+
+        a {
+          display: block;
+          text-decoration: none;
+          font-weight: 600;
+          line-height: 44px;
+          color: var(--main-color);
+          font-size: rem(24);
+        }
+      }
+
+      .post-item-text {
+        display: block;
+        font-weight: 400;
+        font-size: rem(14);
+        line-height: rem(28);
+        color: var(--text-color);
+        //margin-bottom: 30px;
+      }
+    }
+  }
+
+  .post-list-pagination {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    grid-column: span 2 / 3;
+
+    .prev {
+      display: none;
+    }
+
+    .next {
+      display: none;
+    }
+
+    a, span {
+      text-decoration: none;
+      color: var(--main-color);
+      display: block;
+      margin: 0 8px;
+      padding: 4px 13px;
+      font-size: rem(18);
+    }
+
+    .current {
+      background-color: var(--main-color);
+      color: white;
+    }
+  }
+}

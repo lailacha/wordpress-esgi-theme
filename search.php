@@ -62,3 +62,8 @@ $the_query = new WP_Query( $search_query );
         </div>
     </main>
 <?php get_footer(); ?>
+
+
+
+
+
