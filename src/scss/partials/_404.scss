@@ -1,0 +1,27 @@
+.error404
+{
+    background-color: var(--main-color);
+
+    .search{
+        display: none;
+    }
+
+ 
+    .search-sentence{
+        color: white;
+        width: 70%;
+        font-size: 26px;
+    }
+
+    .footer-logo{
+        display: none;
+    }
+
+    .search-bar input{
+        border-bottom: 1px solid white;
+    }
+
+    #line-burger {
+        fill: white;
+    }
+}

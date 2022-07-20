@@ -19,9 +19,43 @@
         padding: rem(30);
         margin-top: rem(50);
 
+
         a {
             color: var(--main-color);
-        
+
         }
+
+        svg{
+            margin-right: rem(10);
+        }
+    }
+
+
+    .comment-reply{
+        display: flex;
+        align-items: center;
+    }
+
+    .comment-respond{
+        margin-top: rem(139);
+        h6{
+            font-weight: normal;
+        }
+    }
+
+    .comment-form{
+        
+        textarea, input:not([type="submit"]){
+
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #E4E4E4;
+            
+        }
+         input[type="submit"]{
+            background-color: transparent;
+            color: var(--main-color);
+            border: none;
+         }
     }
 }

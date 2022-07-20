@@ -1,4 +1,10 @@
 #site-header{
+	position: relative;
+
+
+	#line-burger {
+		fill: var(--main-color);
+	}
 
 	.custom-logo{ 
 		max-width: 120px;
@@ -82,6 +88,7 @@ header.burger-open{
     flex-direction: column;
     align-items: end;
 }
+
 
 }
 

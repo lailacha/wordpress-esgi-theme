@@ -1,0 +1,32 @@
+.search-bar{
+    height: 3rem;
+    cursor: pointer;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    position: relative;
+  
+    svg{
+
+      height: 100%;
+      cursor: pointer;
+      fill: #969696;
+      height: rem(16);
+      width: rem(16);
+    }
+
+    button{
+      width: 40px;
+      background: transparent;
+      height: 33px;
+      border: none;
+    }
+  
+    input{
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      background-color: transparent;
+    }
+  }

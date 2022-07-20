@@ -64,6 +64,16 @@ function esgi_customize_register( $wp_customize ) {
 
 
 
+	$wp_customize->add_section('esgi_footer'
+,[
+		'title' => 'Gestion du footer',
+		'priority' => 4
+	]);
+	
+	// $wp_customize->add_setting('esgi_footer',
+	
+	// )
+
 	
 	$wp_customize->add_section('esgi_exam_images', [
 		'title' => 'Gestion des images',
