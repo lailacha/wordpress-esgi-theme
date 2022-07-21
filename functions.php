@@ -174,8 +174,6 @@ function esgi_customize_register( $wp_customize ) {
 	]));
 	
    
-   
-
 
   $wp_customize->add_section( 'esgi_custom' , [
 	  'title' => 'Personnalisation du thème',
@@ -234,7 +232,7 @@ function esgi_customize_register( $wp_customize ) {
 	$wp_customize->add_panel( 'text_blocks', array(
         'priority'       => 10,
         'theme_supports' => '',
-        'title'          => __( 'Text Blocks', 'theme_name' ),
+        'title'          => __( 'Gestion des textes', 'theme_name' ),
         'description'    => __( 'Set editable text for certain content.', 'theme_name' ),
     ) );
     // Add section.
@@ -243,6 +241,22 @@ function esgi_customize_register( $wp_customize ) {
         'panel'    => 'text_blocks',
         'priority' => 10
     ) );
+	$wp_customize->add_setting( 'title_page', array(
+		'default'           => __( 'Default text', 'theme-name' ),
+		'sanitize_callback' => 'sanitize_text'
+   ) );
+   // Add control
+   $wp_customize->add_control( new WP_Customize_Control(
+	   $wp_customize,
+	   'title_page',
+		   array(
+			   'label'    => __( 'Title page', 'theme_name' ),
+			   'section'  => 'custom_title_text',
+			   'settings' => 'title_page',
+			   'type'     => 'text'
+		   )
+	   )
+   ); 
     // Add setting
     $wp_customize->add_setting( 'title_text_block', array(
          'default'           => __( 'Default text', 'theme-name' ),
@@ -260,12 +274,254 @@ function esgi_customize_register( $wp_customize ) {
             )
         )
     );
-
-
-
+	
+    // Add setting
+     $wp_customize->add_setting( 'title1', array(
+         'default'           => __( 'Default text', 'theme-name' ),
+         'sanitize_callback' => 'sanitize_text'
+    ) );
+    // Add control
+    $wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'title1',
+            array(
+                'label'    => __( 'Title 1', 'theme_name' ),
+                'section'  => 'custom_title_text',
+                'settings' => 'title1',
+                'type'     => 'text'
+            )
+        )
+    ); 
+	$wp_customize->add_setting( 'identity_title', array(
+		'default'           => __( 'Default text', 'theme-name' ),
+		'sanitize_callback' => 'sanitize_text'
+   ) );
+   // Add control
+   $wp_customize->add_control( new WP_Customize_Control(
+	   $wp_customize,
+	   'identity_title',
+		   array(
+			   'label'    => __( 'Identity title', 'theme_name' ),
+			   'section'  => 'custom_title_text',
+			   'settings' => 'identity_title',
+			   'type'     => 'text'
+		   )
+	   )
+   );
+   $wp_customize->add_setting( 'identity', array(
+	'default'           => __( 'Default text', 'theme-name' ),
+	'sanitize_callback' => 'sanitize_text'
+) );
+// Add control
+$wp_customize->add_control( new WP_Customize_Control(
+   $wp_customize,
+   'identity',
+	   array(
+		   'label'    => __( 'Identity', 'theme_name' ),
+		   'section'  => 'custom_title_text',
+		   'settings' => 'identity',
+		   'type'     => 'text'
+	   )
+   )
+); 
+$wp_customize->add_setting( 'vision_title', array(
+	'default'           => __( 'Default text', 'theme-name' ),
+	'sanitize_callback' => 'sanitize_text'
+) );
+// Add control
+$wp_customize->add_control( new WP_Customize_Control(
+   $wp_customize,
+   'vision_title',
+	   array(
+		   'label'    => __( 'Vision title', 'theme_name' ),
+		   'section'  => 'custom_title_text',
+		   'settings' => 'vision_title',
+		   'type'     => 'text'
+	   )
+   )
+);
+$wp_customize->add_setting( 'vision', array(
+	'default'           => __( 'Default text', 'theme-name' ),
+	'sanitize_callback' => 'sanitize_text'
+) );
+// Add control
+$wp_customize->add_control( new WP_Customize_Control(
+   $wp_customize,
+   'vision',
+	   array(
+		   'label'    => __( 'Vision', 'theme_name' ),
+		   'section'  => 'custom_title_text',
+		   'settings' => 'vision',
+		   'type'     => 'text'
+	   )
+   )
+);
+$wp_customize->add_setting( 'mission_title', array(
+	'default'           => __( 'Default text', 'theme-name' ),
+	'sanitize_callback' => 'sanitize_text'
+) );
+// Add control
+$wp_customize->add_control( new WP_Customize_Control(
+   $wp_customize,
+   'mission_title',
+	   array(
+		   'label'    => __( 'mission title', 'theme_name' ),
+		   'section'  => 'custom_title_text',
+		   'settings' => 'mission_title',
+		   'type'     => 'text'
+	   )
+   )
+);
+$wp_customize->add_setting( 'mission', array(
+	'default'           => __( 'Default text', 'theme-name' ),
+	'sanitize_callback' => 'sanitize_text'
+) );
+// Add control
+$wp_customize->add_control( new WP_Customize_Control(
+   $wp_customize,
+   'mission',
+	   array(
+		   'label'    => __( 'mission', 'theme_name' ),
+		   'section'  => 'custom_title_text',
+		   'settings' => 'mission',
+		   'type'     => 'text'
+	   )
+   )
+); 
+$wp_customize->add_setting( 'member_job1', array(
+	'default'           => __( 'Default text', 'theme-name' ),
+	'sanitize_callback' => 'sanitize_text'
+) );
+// Add control
+$wp_customize->add_control( new WP_Customize_Control(
+   $wp_customize,
+   'member_job1',
+	   array(
+		   'label'    => __( 'Poste', 'theme_name' ),
+		   'section'  => 'custom_title_text',
+		   'settings' => 'member_job1',
+		   'type'     => 'text'
+	   )
+   )
+);
+$wp_customize->add_setting( 'member_info1', array(
+	'default'           => __( 'Default text', 'theme-name' ),
+	'sanitize_callback' => 'sanitize_text'
+) );
+// Add control
+$wp_customize->add_control( new WP_Customize_Control(
+   $wp_customize,
+   'member_info1',
+	   array(
+		   'label'    => __( 'Poste', 'theme_name' ),
+		   'section'  => 'custom_title_text',
+		   'settings' => 'member_job1',
+		   'type'     => 'text'
+	   )
+   )
+);
+$wp_customize->add_setting( 'member_job2', array(
+	'default'           => __( 'Default text', 'theme-name' ),
+	'sanitize_callback' => 'sanitize_text'
+) );
+// Add control
+$wp_customize->add_control( new WP_Customize_Control(
+   $wp_customize,
+   'member_job2',
+	   array(
+		   'label'    => __( 'Poste', 'theme_name' ),
+		   'section'  => 'custom_title_text',
+		   'settings' => 'member_job2',
+		   'type'     => 'text'
+	   )
+   )
+);
+$wp_customize->add_setting( 'member_info2', array(
+	'default'           => __( 'Default text', 'theme-name' ),
+	'sanitize_callback' => 'sanitize_text'
+) );
+// Add control
+$wp_customize->add_control( new WP_Customize_Control(
+   $wp_customize,
+   'member_info2',
+	   array(
+		   'label'    => __( 'Poste', 'theme_name' ),
+		   'section'  => 'custom_title_text',
+		   'settings' => 'member_job2',
+		   'type'     => 'text'
+	   )
+   )
+);
+$wp_customize->add_setting( 'member_job3', array(
+	'default'           => __( 'Default text', 'theme-name' ),
+	'sanitize_callback' => 'sanitize_text'
+) );
+// Add control
+$wp_customize->add_control( new WP_Customize_Control(
+   $wp_customize,
+   'member_job3',
+	   array(
+		   'label'    => __( 'Poste', 'theme_name' ),
+		   'section'  => 'custom_title_text',
+		   'settings' => 'member_job3',
+		   'type'     => 'text'
+	   )
+   )
+);
+$wp_customize->add_setting( 'member_info3', array(
+	'default'           => __( 'Default text', 'theme-name' ),
+	'sanitize_callback' => 'sanitize_text'
+) );
+// Add control
+$wp_customize->add_control( new WP_Customize_Control(
+   $wp_customize,
+   'member_info3',
+	   array(
+		   'label'    => __( 'Poste', 'theme_name' ),
+		   'section'  => 'custom_title_text',
+		   'settings' => 'member_job3',
+		   'type'     => 'text'
+	   )
+   )
+);
+$wp_customize->add_setting( 'member_job4', array(
+	'default'           => __( 'Default text', 'theme-name' ),
+	'sanitize_callback' => 'sanitize_text'
+) );
+// Add control
+$wp_customize->add_control( new WP_Customize_Control(
+   $wp_customize,
+   'member_job4',
+	   array(
+		   'label'    => __( 'Poste', 'theme_name' ),
+		   'section'  => 'custom_title_text',
+		   'settings' => 'member_job4',
+		   'type'     => 'text'
+	   )
+   )
+);
+$wp_customize->add_setting( 'member_info4', array(
+	'default'           => __( 'Default text', 'theme-name' ),
+	'sanitize_callback' => 'sanitize_text'
+) );
+// Add control
+$wp_customize->add_control( new WP_Customize_Control(
+   $wp_customize,
+   'member_info4',
+	   array(
+		   'label'    => __( 'Poste', 'theme_name' ),
+		   'section'  => 'custom_title_text',
+		   'settings' => 'member_job4',
+		   'type'     => 'text'
+	   )
+   )
+);            
+	 
+	
 
 	
-  
+
+
     // Sanitize text
     function sanitize_text( $text ) {
         return sanitize_text_field( $text );
