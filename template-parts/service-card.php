@@ -4,9 +4,10 @@
         <img class="col-md-3 d-none d-md-block" src="<?php echo get_theme_mod('esgi_services_photo_2'); ?>" alt="">
         
         <div class="col-md-3 col-sm-7 d-flex justify-content-center align-items-center align-middle">
-            <h3 class="align-middle">Private parties</h3>
+            <h4 class="align-middle">Private parties</h4>
         </div>
-        <img class="col-md-3 col-sm-5"  src="<?php echo get_theme_mod('esgi_services_photo_3');?>" alt="membre de l'équipe">
+        <img class="col-md-3  d-none d-md-block"  src="<?php echo get_theme_mod('esgi_services_photo_3');?>" alt="membre de l'équipe">
 
     </div>
 
+ 
