@@ -4,6 +4,7 @@
 	<div class="container-fluid p-0">
 		<div class="row">
 			<div class="col-md-12">
+				<?php include('templates/home.php'); ?>
 				<?php include('template-parts/service-card.php'); ?>
 				<?php 
 				if(!is_front_page()){
@@ -24,6 +25,7 @@
 				}
 				?>
 			</div>
+			
 		</div>
 	</div>
 </main>
