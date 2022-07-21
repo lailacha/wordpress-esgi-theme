@@ -12055,6 +12055,7 @@ header.burger-open {
 }
 .page-contact #information-contact .image-card {
   max-width: 100%;
+  max-height: 500px;
 }
 .page-contact .contact-form {
   display: flex;
