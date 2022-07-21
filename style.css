@@ -12036,3 +12036,65 @@ header.burger-open {
   background-color: var(--main-color);
   color: white;
 }
+
+.page-contact #information-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.page-contact #information-contact .location-section, .page-contact #information-contact .ceo-section, .page-contact #information-contact .manager-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+}
+.page-contact #information-contact .location-section {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.page-contact #information-contact .image-card {
+  max-width: 100%;
+}
+.page-contact .contact-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.page-contact .contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.page-contact .contact-form .form-group div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.page-contact .contact-form .form-group div input {
+  flex-basis: 46%;
+}
+.page-contact .contact-form .form-group input:not([type=submit]), .page-contact .contact-form .form-group textarea {
+  border: none;
+  resize: none;
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+.page-contact .contact-form .form-group input:not([type=submit]) :focus, .page-contact .contact-form .form-group input:not([type=submit]) :focus-visible, .page-contact .contact-form .form-group textarea :focus, .page-contact .contact-form .form-group textarea :focus-visible {
+  outline: none;
+  border: none;
+}
+.page-contact .contact-form .form-group input[type=submit] {
+  background: none;
+  border: none;
+  line-height: 25px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--main-color);
+}
