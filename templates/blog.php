@@ -23,7 +23,7 @@ $result    = $the_query->posts;
                 <div class="col-md-4">
 					<?= get_sidebar() ?>
                 </div>
-                <div class="col-md-6 posts" id="post-list-wrapper">
+                <div class="col-md-8 posts" id="post-list-wrapper">
 
                     <?php include __DIR__."/../template-parts/post-list.php";?>
                     <div class="post-list-pagination">

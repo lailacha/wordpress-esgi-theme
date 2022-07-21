@@ -19,16 +19,17 @@
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
-      margin: 15px;
+      margin: 25px 20px;
 
       .post-item-image {
         box-sizing: border-box;
         margin-bottom: 25px;
-        width: 333px;
-        height: 222px;
+        width: 100%;
+        height: 250px;
         object-fit: cover;
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
         position: relative;
         /* img {
            width: 333px;
