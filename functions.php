@@ -344,7 +344,7 @@ add_action( 'customize_register', 'list_partners' );
 function list_partners( $wp_customize ): void {
 
 	$wp_customize->add_section( 'Partners', [
-		'title'    => 'Partners',
+		'title'    => 'Template Partners',
 		'priority' => 1,
 	] );
 
