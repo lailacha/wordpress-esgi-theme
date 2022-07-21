@@ -30,15 +30,24 @@
 
   .recents-post--text {
     margin-left: rem(25);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
     a {
       text-decoration: none;
       color: var(--text-color);
       font-size: 20px;
+      margin: 0;
+
     }
 
     p {
       color: #adadad;
       font-size: 13px;
+      margin: 0;
+
     }
   }
 

@@ -1,3 +1,4 @@
+/*
 $(document).ready(function(){
 
 	ajaxizePageLinks();
@@ -5,11 +6,11 @@ $(document).ready(function(){
 
 	//toogle element when click on it
 	$('.toggle-item').click(function(){
-		$('.toggle-item').toggleClass('close');	
+		$('.toggle-item').toggleClass('close');
 		$('.burger-menu').toggleClass('burger-open');
 	}
 	);
-	
+
 })
 
 function showPage(page){
@@ -31,7 +32,7 @@ function ajaxizePageLinks(){
 	var page = 1;
 	$('.page-numbers').click(function(e){
 		e.preventDefault();
-		
+
 		var currentPage = $('.page-numbers.current').html();
 		if($(this).hasClass('next')){
 			page = Number(currentPage) + 1;
@@ -52,3 +53,4 @@ function ajaxizePageLinks(){
 
 	})
 }
+*/
