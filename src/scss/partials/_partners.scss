@@ -1,0 +1,26 @@
+.list-partners {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  & > div {
+    margin: 0 5px;
+    width: fit-content;
+    max-height: 110px;
+
+    & > img {
+      width: 100%;
+      max-height: 110px;
+      object-fit: cover;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
