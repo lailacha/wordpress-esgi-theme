@@ -1,21 +1,32 @@
-<?php $tags = get_the_tags($post->ID) ?>
+<?php $tags = get_the_tags($post->ID);
+$categories = get_the_category($post->ID);
+$categories = array_values( $categories );
+?>
 <?php get_header(); ?>
 
 <main id="site-content">
-	<div class="container post">
+	<div class="mr-4 ml-4 container-fluid post">
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-4 offset-md-1">
 				<?php get_sidebar(); ?>
 			</div>
-			<div class="col-md-8">
+			<div class="col-md-6 single-post">
 			<?= get_the_post_thumbnail($post->ID) ?>
-				<h3 class="mt-5">Uncategorized - July 5, 2022</h3>
+				<p class="mt-5 fw-bolder txt-main-color">
+					<?php  foreach ( array_keys( $categories ) as $key ) {
+						echo $categories[ $key ]->name ;
+						} 
+						echo ' - '.get_the_date()
+						?></p>
 				<?php the_content() ?>
 				<p> </p>
-				<div class="row">
-								<?php foreach ($tags as $tag) : ?>
+				<div class="row mb-5">
+								<?php if(($tags)):
+								foreach ($tags as $tag) : ?>
 					<a class="post-tag" href="<?= get_tag_link($tag->term_id) ?>"><?= $tag->name ?></a>
-				<?php endforeach; ?>
+				<?php endforeach;
+					endif;
+				?>
 				</div>
 	
 			<?php if (comments_open()){

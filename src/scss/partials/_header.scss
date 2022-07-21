@@ -1,4 +1,10 @@
 #site-header{
+	position: relative;
+
+
+	#line-burger {
+		fill: var(--main-color);
+	}
 
 	.custom-logo{ 
 		max-width: 120px;
@@ -33,6 +39,10 @@
 				display: block;
 				margin-bottom: rem(16);
 				line-height: 1; 
+
+				&:hover{
+					color: #a5a5a5;
+				}
 			}
 		}
 	}
@@ -56,6 +66,8 @@
 	}
 }
 header.burger-open{
+	animation-duration: 1s;
+	animation-name: sidebar_entrance;
 	position: sticky;
 	top: 0;
 	width: 100%;
@@ -82,6 +94,7 @@ header.burger-open{
     flex-direction: column;
     align-items: end;
 }
+
 
 }
 
