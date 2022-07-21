@@ -64,16 +64,149 @@ function esgi_customize_register( $wp_customize ) {
 
 
 
+	$wp_customize->add_section('esgi_services'
+	,[
+			'title' => 'Gestion des services',
+			'priority' => 4
+		]);
+
+		
+		$wp_customize->add_setting('esgi_services_photo_1'
+		,[
+			'type' => 'theme_mod',
+			'default' => '',
+			'sanitize_callback' => 'esc_url_raw'
+		]);
+
+		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'esgi_services_photo_1', [
+			'label' => 'Photo 1',
+			'section' => 'esgi_services',
+			'settings' => 'esgi_services_photo_1',
+			'priority' => 1
+		]));
+
+		$wp_customize->add_setting('esgi_services_photo_2'
+		,[
+			'type' => 'theme_mod',
+			'default' => '',
+			'sanitize_callback' => 'esc_url_raw'
+		]);
+
+		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'esgi_services_photo_2', [
+			'label' => 'Photo 2',
+			'section' => 'esgi_services',
+			'settings' => 'esgi_services_photo_2',
+			'priority' => 2
+		]));
+
+		$wp_customize->add_setting('esgi_services_photo_3'
+		,[
+			'type' => 'theme_mod',
+			'default' => '',
+			'sanitize_callback' => 'esc_url_raw'
+		]);
+
+		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'esgi_services_photo_3', [
+			'label' => 'Photo 3',
+			'section' => 'esgi_services',
+			'settings' => 'esgi_services_photo_3',
+			'priority' => 3
+		]));
+		
+
 	$wp_customize->add_section('esgi_footer'
 ,[
 		'title' => 'Gestion du footer',
 		'priority' => 4
 	]);
 	
-	// $wp_customize->add_setting('esgi_footer',
+	$wp_customize->add_setting('esgi_footer_first_contact',
+	[
+		'default' => '',
+		'transport' => 'refresh'
+	]);
 	
-	// )
+	$wp_customize->add_control('esgi_footer_first_contact',
+	[
+		'type' => 'text',
+		'section' => 'esgi_footer',
+		'label' => 'Nom du premier contact',
+		'settings' => 'esgi_footer_first_contact',
+		'default' => 'Test',
+	]);
+	
+	$wp_customize->add_setting('esgi_footer_first_contact_email',
+	[
+		'default' => '',
+		'transport' => 'refresh'
+	]);
 
+	$wp_customize->add_control('esgi_footer_first_contact_email',
+	[
+		'type' => 'email',
+		'section' => 'esgi_footer',
+		'label' => 'Email du premier contact',
+		'settings' => 'esgi_footer_first_contact_email'
+	]);
+
+	$wp_customize->add_setting('	',
+	[
+		'default' => '',
+		'transport' => 'refresh'
+	]);
+
+	$wp_customize->add_control('esgi_footer_first_contact_phone',
+	[
+		'type' => 'text',
+		'section' => 'esgi_footer',
+		'label' => 'Téléphone du premier contact',
+		'settings' => 'esgi_footer_first_contact_phone'
+	]);
+
+	$wp_customize->add_setting('esgi_footer_second_contact',
+	[
+		'default' => '',
+		'transport' => 'refresh'
+	]);
+
+
+	$wp_customize->add_control('esgi_footer_second_contact',
+	[
+		'type' => 'text',
+		'section' => 'esgi_footer',
+		'label' => 'Nom du deuxième contact',
+		'settings' => 'esgi_footer_second_contact'
+	]);
+
+	$wp_customize->add_setting('esgi_footer_second_contact_email',
+	[
+		'default' => '',
+		'transport' => 'refresh'
+	]);
+
+	$wp_customize->add_control('esgi_footer_second_contact_email',
+	[
+		'type' => 'email',
+		'section' => 'esgi_footer',
+		'label' => 'Email du deuxième contact',
+		'settings' => 'esgi_footer_second_contact_email'
+	]);
+
+	$wp_customize->add_setting('esgi_footer_second_contact_phone',
+	[
+		'default' => '',
+		'transport' => 'refresh'
+	]);
+
+	$wp_customize->add_control('esgi_footer_second_contact_phone',
+	[
+		'type' => 'text',
+		'section' => 'esgi_footer',
+		'label' => 'Téléphone du deuxième contact',
+		'settings' => 'esgi_footer_second_contact_phone'
+	]);
+
+	
 	
 	$wp_customize->add_section('esgi_exam_images', [
 		'title' => 'Gestion des images',
@@ -199,42 +332,4 @@ function cc_mime_types($mimes) {
 	return $mimes;
    }
    add_filter('upload_mimes', 'cc_mime_types');
-
-
-
-
-
-
-add_action( 'wp_ajax_load_posts', 'esgi_ajax_load_posts' );
-add_action( 'wp_ajax_nopriv_load_posts', 'esgi_ajax_load_posts' );
-
-
-function esgi_ajax_load_posts(){
-	$paged = $_POST['page'];
-	$args = [
-		'post_type' => 'post',
-		'posts_per_page' => get_option('posts_per_page'),
-		'post_status' => 'publish',
-		'paged' => $paged,
-	];
-	$the_query = new WP_Query($args);
-	// Mise en buffer
-	ob_start();
-	include('template-parts/post-list.php');
-	echo '<script>ajaxizePageLinks()</script>';
-	// Récupération du contenu du buffer
-	echo ob_get_clean();
-	wp_die();
-}
-
-
-// Override du filtre paginate_links_output utilisé par paginate_links
-add_filter( 'paginate_links_output', 'esgi_paginate_links' );
-
-function esgi_paginate_links($args) {
-	return $args;
-}
-
-
-
 

@@ -17,23 +17,23 @@
 			</figure>
 		</div>
 		<div class="offset-md-4 col-md-2 footer-contact">
-			<p class="fw-bold mb-3">Manager</p>
-			<p>+33 1 53 31 25 23</p>
-			<p>info@esgi.com</p>
+			<p class="fw-bold mb-3"><?php echo get_theme_mod('esgi_footer_first_contact') ?></p>
+			<p><?php echo get_theme_mod('esgi_footer_first_contact_phone') ?></p>
+			<p><?php echo get_theme_mod('esgi_footer_first_contact_email') ?></p>
 		</div>
 		<div class="col-md-2 footer-contact">
-			<p class="fw-bold mb-3">CEO</^>
-			<p>+33 1 53 31 25 25</p>
-			<p>ceo@company.com</p>
+			<p class="fw-bold mb-3"><?php echo get_theme_mod('esgi_footer_second_contact') ?></^>
+			<p><?php echo get_theme_mod('esgi_footer_second_contact_phone') ?></p>
+			<p><?php echo get_theme_mod('esgi_footer_second_contact_email') ?></p>
 		</div>
 	</div>
 	<section class="row corporate">
-		<div class="col-md-2 offset-md-1">
+		<div class="col-md-3 offset-md-1">
 			<p class="">2022 Figma Template by ESGI</p>
 
 		</div>
 
-		<section class="col-md-2 offset-md-7">
+		<section class="col-md-2 offset-md-6">
 		<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M2.40179 4.82589C1.07589 4.82589 0 3.72768 0 2.40179C0 1.07589 1.07589 0 2.40179 0C3.72768 0 4.80357 1.07589 4.80357 2.40179C4.80357 3.72768 3.72768 4.82589 2.40179 4.82589ZM4.47768 20H0.330357V6.64732H4.47768V20ZM15.8616 20H20H20.0045V12.6652C20.0045 9.07589 19.2321 6.3125 15.0357 6.3125C13.0179 6.3125 11.6652 7.41964 11.1116 8.46875H11.0536V6.64732H7.07589V20H11.2188V13.3884C11.2188 11.6473 11.5491 9.96429 13.7054 9.96429C15.8304 9.96429 15.8616 11.9509 15.8616 13.5V20Z" fill="white" />
 			</svg>

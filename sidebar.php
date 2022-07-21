@@ -62,6 +62,19 @@
             </div>
 		<?php endif; ?>
 
-    </div>
+
+	<div class="tags mb-4">
+		<h6>
+			Tags
+		</h6>
+		<?php if(($tags)): ?>
+		<div class="d-flex mt-4">
+						<?php foreach ($tags as $tag) : ?>
+					<a class="post-tag" href="<?= get_tag_link($tag->term_id) ?>"><?= $tag->name ?></a>
+					
+		</div>
+		<?php endforeach; endif;
+	?>
+	</div>
 
 </aside>
