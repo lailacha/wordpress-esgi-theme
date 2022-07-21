@@ -1,0 +1,16 @@
+.list-partners{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  & > div{
+    margin: 0 5px;
+    width: fit-content;
+    &:first-child{
+      margin-left: 0;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
