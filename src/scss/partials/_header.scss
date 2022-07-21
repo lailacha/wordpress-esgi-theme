@@ -39,6 +39,10 @@
 				display: block;
 				margin-bottom: rem(16);
 				line-height: 1; 
+
+				&:hover{
+					color: #a5a5a5;
+				}
 			}
 		}
 	}
@@ -62,6 +66,8 @@
 	}
 }
 header.burger-open{
+	animation-duration: 1s;
+	animation-name: sidebar_entrance;
 	position: sticky;
 	top: 0;
 	width: 100%;

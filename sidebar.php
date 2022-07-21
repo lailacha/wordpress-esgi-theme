@@ -59,11 +59,10 @@
 		<div class="d-flex mt-4">
 						<?php foreach ($tags as $tag) : ?>
 					<a class="post-tag" href="<?= get_tag_link($tag->term_id) ?>"><?= $tag->name ?></a>
-				<?php endforeach;
-					endif;
-					?>
+					
 		</div>
-				
+		<?php endforeach; endif;
+	?>
 	</div>
 
 </aside>
