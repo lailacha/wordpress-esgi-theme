@@ -25,7 +25,7 @@
 					</linearGradient>
 				</defs>
 			</svg>
-			<h3 class="search text-white mt-4">Or try search</h3>
+			
 		</div>
 
 				<div class="burger-menu toggle-menu col-md-4 offset-md-3">

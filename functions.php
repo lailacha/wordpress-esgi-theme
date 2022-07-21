@@ -92,7 +92,89 @@ function esgi_customize_register( $wp_customize ) {
 		'section' => 'esgi_exam_images',
 		'settings' => 'esgi_exam_image_dj',
 	]));
+	$wp_customize->add_section('esgi_exam_images', [
+		'title' => 'Gestion des images',
+		'priority' => 3,
+	]);
 
+	$wp_customize->add_setting('esgi_exam_image_dj', [
+		'type' => 'theme_mod',
+		'default' => '',
+		'sanitize_callback' => 'esc_url_raw',
+	]);
+
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 
+	'esgi_exam_image_dj', [
+		'label' => 'Photo du DJ',
+		'section' => 'esgi_exam_images',
+		'settings' => 'esgi_exam_image_dj',
+	]));
+	$wp_customize->add_setting('esgi_exam_image_AboutUs', [
+		'type' => 'theme_mod',
+		'default' => '',
+		'sanitize_callback' => 'esc_url_raw',
+	]);
+
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 
+	'esgi_exam_image_AboutUs', [
+		'label' => 'Photo About us',
+		'section' => 'esgi_exam_images',
+		'settings' => 'esgi_exam_image_AboutUs',
+	]));
+	$wp_customize->add_setting('esgi_exam_image_section2home', [
+		'type' => 'theme_mod',
+		'default' => '',
+		'sanitize_callback' => 'esc_url_raw',
+	]);
+
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 
+	'esgi_exam_image_section2home', [
+		'label' => 'Photo section 2 home',
+		'section' => 'esgi_exam_images',
+		'settings' => 'esgi_exam_image_section2home',
+	]));
+	$wp_customize->add_setting('membre1', [
+		'type' => 'theme_mod',
+		'default' => '',
+		'sanitize_callback' => 'esc_url_raw',
+	]);
+
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 
+	'membre1', [
+		'label' => 'membre1',
+		'section' => 'esgi_exam_images',
+		'settings' => 'membre1',
+	]));	
+
+	
+	$wp_customize->add_setting('membre3', [
+		'type' => 'theme_mod',
+		'default' => '',
+		'sanitize_callback' => 'esc_url_raw',
+	]);
+
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 
+	'membre3', [
+		'label' => 'Membre 3',
+		'section' => 'esgi_exam_images',
+		'settings' => 'membre3',
+	]));
+	
+	$wp_customize->add_setting('membre4', [
+		'type' => 'theme_mod',
+		'default' => '',
+		'sanitize_callback' => 'esc_url_raw',
+	]);
+
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 
+	'membre4', [
+		'label' => 'Membre 4',
+		'section' => 'esgi_exam_images',
+		'settings' => 'membre4',
+	]));
+	
+   
+   
 
 
   $wp_customize->add_section( 'esgi_custom' , [
@@ -149,7 +231,47 @@ function esgi_customize_register( $wp_customize ) {
 	  'description' => __( 'Activer la version sombre du thème.' ),
 	] );
 
+	$wp_customize->add_panel( 'text_blocks', array(
+        'priority'       => 10,
+        'theme_supports' => '',
+        'title'          => __( 'Text Blocks', 'theme_name' ),
+        'description'    => __( 'Set editable text for certain content.', 'theme_name' ),
+    ) );
+    // Add section.
+    $wp_customize->add_section( 'custom_title_text' , array(
+        'title'    => __('Custom Text','theme-name'),
+        'panel'    => 'text_blocks',
+        'priority' => 10
+    ) );
+    // Add setting
+    $wp_customize->add_setting( 'title_text_block', array(
+         'default'           => __( 'Default text', 'theme-name' ),
+         'sanitize_callback' => 'sanitize_text'
+    ) );
+    // Add control
+    $wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'custom_title_text',
+            array(
+                'label'    => __( 'Custom Text', 'theme_name' ),
+                'section'  => 'custom_title_text',
+                'settings' => 'title_text_block',
+                'type'     => 'text'
+            )
+        )
+    );
+
+
+
+
+	
+  
+    // Sanitize text
+    function sanitize_text( $text ) {
+        return sanitize_text_field( $text );
+    }
 }
+
 add_action( 'customize_register', 'esgi_customize_register' );
 
 function esgi_sanitize_checkbox( $checked ) {

@@ -10580,6 +10580,50 @@ header.burger-open {
 .services-page .content {
   padding-left: 4.375rem;
 }
+.section-aboutus{
+  padding-top: 2rem;
+  width: 70%;
+  height: auto;
+}
+.section1_home{
+  width: 100%;
+}
+.section-aboutus .section1_image {
+  padding-bottom: 4rem;
+}
+.section-aboutus .section1_image img{
+  width: 100%;
+  height: auto;
+}
+.section2_home {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.section2_image {
+  width: 40%;
+  height: auto;
+}
+.section2_image img{
+  width: 100%;
+  height: auto;
+}
+.section2_home .text_part {
+  padding-top: 4rem;
+  padding-left: 4rem;
+  width: 600px;
+}
+.benefit{
+  padding: 1rem;
+  width: 23%;
+}
+.benefit img{
+  width: 100%;
+  height: auto;
+}
+.container_teams{
+  padding-left: 2rem;
+}
+
 
 .post a {
   text-decoration: none;
@@ -10694,4 +10738,9 @@ header.burger-open {
   border: none;
   outline: none;
   background-color: transparent;
+}
+.section1_home {
+  display: flex;
+  justify-content: flex-end;
+  
 }
