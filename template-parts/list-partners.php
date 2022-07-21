@@ -4,37 +4,37 @@
 
         <div class="col-2">
             <img class="image-card"
-                 src="<?php echo get_theme_mod( 'add partner 1', get_bloginfo( 'template_url' ) . '/assets/images/partner-1.svg' ) ?>"
+                 src="<?php echo get_theme_mod( 'logo partner 1', get_bloginfo( 'template_url' ) . '/assets/images/partner-1.svg' ) ?>"
                  alt="">
         </div>
         <div class="col-2">
             <img class="image-card"
-                 src="<?php echo get_theme_mod( 'add partner 2', get_bloginfo( 'template_url' ) . '/assets/images/partner-2.svg' ) ?>"
+                 src="<?php echo get_theme_mod( 'logo partner 2', get_bloginfo( 'template_url' ) . '/assets/images/partner-2.svg' ) ?>"
                  alt="">
         </div>
 
         <div class="col-2">
             <img  class="image-card"
-                 src="<?php echo get_theme_mod( 'add partner 3', get_bloginfo( 'template_url' ) . '/assets/images/partner-3.svg' ) ?>"
+                 src="<?php echo get_theme_mod( 'logo partner 3', get_bloginfo( 'template_url' ) . '/assets/images/partner-3.svg' ) ?>"
                  alt="">
         </div>
 
         <div class="col-2">
             <img class="image-card"
-                 src="<?php echo get_theme_mod( 'add partner 4', get_bloginfo( 'template_url' ) . '/assets/images/partner-4.svg' ) ?>"
+                 src="<?php echo get_theme_mod( 'logo partner 4', get_bloginfo( 'template_url' ) . '/assets/images/partner-4.svg' ) ?>"
                  alt="">
         </div>
 
 
         <div class="col-2">
             <img class="image-card"
-                 src="<?php echo get_theme_mod( 'add partner 5', get_bloginfo( 'template_url' ) . '/assets/images/partner-5.svg' ) ?>"
+                 src="<?php echo get_theme_mod( 'logo partner 5', get_bloginfo( 'template_url' ) . '/assets/images/partner-5.svg' ) ?>"
                  alt="">
         </div>
 
         <div class="col-2">
             <img class="image-card"
-                 src="<?php echo get_theme_mod( 'add partner 6', get_bloginfo( 'template_url' ) . '/assets/images/partner-6.svg' ) ?>"
+                 src="<?php echo get_theme_mod( 'logo partner 6', get_bloginfo( 'template_url' ) . '/assets/images/partner-6.svg' ) ?>"
                  alt="">
         </div>
 
