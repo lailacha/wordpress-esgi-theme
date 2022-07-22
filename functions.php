@@ -99,7 +99,7 @@ function esgi_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'esgi_footer_first_contact',
 		[
-			'default'   => '',
+			'default'   => 'Manager',
 			'transport' => 'refresh'
 		] );
 
@@ -114,7 +114,7 @@ function esgi_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'esgi_footer_first_contact_email',
 		[
-			'default'   => '',
+			'default'   => 'info@esgi.com',
 			'transport' => 'refresh'
 		] );
 
@@ -126,12 +126,6 @@ function esgi_customize_register( $wp_customize ) {
 			'settings' => 'esgi_footer_first_contact_email'
 		] );
 
-	$wp_customize->add_setting( '	',
-		[
-			'default'   => '',
-			'transport' => 'refresh'
-		] );
-
 	$wp_customize->add_control( 'esgi_footer_first_contact_phone',
 		[
 			'type'     => 'text',
@@ -140,9 +134,15 @@ function esgi_customize_register( $wp_customize ) {
 			'settings' => 'esgi_footer_first_contact_phone'
 		] );
 
+		$wp_customize->add_setting( 'esgi_footer_first_contact_phone',
+		[
+			'default'   => '+33 1 53 31 25 25',
+			'transport' => 'refresh'
+		] );
+
 	$wp_customize->add_setting( 'esgi_footer_second_contact',
 		[
-			'default'   => '',
+			'default'   => 'CEO',
 			'transport' => 'refresh'
 		] );
 
@@ -157,7 +157,7 @@ function esgi_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'esgi_footer_second_contact_email',
 		[
-			'default'   => '',
+			'default'   => 'ceo@company.com',
 			'transport' => 'refresh'
 		] );
 
@@ -171,7 +171,7 @@ function esgi_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'esgi_footer_second_contact_phone',
 		[
-			'default'   => '',
+			'default'   => '+33 1 53 31 25 25',
 			'transport' => 'refresh'
 		] );
 

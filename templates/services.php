@@ -17,7 +17,7 @@
 				<?php the_content(); ?>
 				</div>
 			</div>
-			<div class="row p-0">
+			<div class="d-flex">
 				<img src="<?php echo get_theme_mod('esgi_exam_image_dj'); ?>" alt="">
 				</div>
 
